@@ -70,8 +70,8 @@ std::optional<Turn> Mastermind::generate_turn(const Board& board, Cell side) {
 
 	// remove all the pieces that do not pass the movement threshold;
 	std::erase_if(pieces, [&] (Position p) {
-		return p.x >= validity_threshold_x && p.y >= constants::threshold_win_y ||
-			   p.y >= validity_threshold_y && p.x >= constants::threshold_win_x;
+		return (p.x >= validity_threshold_x && p.y >= constants::threshold_win_y) ||
+			   (p.y >= validity_threshold_y && p.x >= constants::threshold_win_x);
 	});
 
 	while(!pieces.empty()) {

@@ -101,6 +101,7 @@ void Game<Frontend, AI>::process() {
 					pieces[blue_index++] = p;
 					break;
 				}
+				default: break;
 			}
 		}
 	}

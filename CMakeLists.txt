@@ -23,6 +23,14 @@ if(UNIX)
 target_link_libraries(almost_chess
 	pthread
 )
+target_compile_options(almost_chess PRIVATE
+	-Werror -Wall -Wextra -Wpedantic
+	-Wfatal-errors
+	-Wno-sign-compare
+	-Wno-unused-parameter
+	-Wno-unused-variable
+	-Wno-unused-function
+)
 endif()
 
 set_property(TARGET almost_chess PROPERTY CXX_STANDARD 20)

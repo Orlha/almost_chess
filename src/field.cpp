@@ -74,6 +74,7 @@ Cell Field::stucking_winner() const {
 					}
 					break;
 				}
+				default: break;
 			}
 		}
 	}

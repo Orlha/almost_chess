@@ -77,12 +77,15 @@ std::optional<Event> Render::access_event() {
 						return events::Move(pos);
 					}
 				}
+				break;
 			}
 			case sf::Event::KeyPressed: {
 				if(event.key.code == sf::Keyboard::R) {
 					return events::Restart {};
 				}
+				break;
 			}
+			default: break;
 		}
 	}
 	return {};
